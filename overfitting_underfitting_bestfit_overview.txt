@@ -1,0 +1,5 @@
+Overfitting: Occurs when a model learns the training data too well, including noise and irrelevant details, leading to poor generalization to new data. It usually happens with overly complex models. Solution: Simplify the model or use regularization.
+
+Underfitting: Happens when the model is too simple to capture the underlying patterns in the data, resulting in poor performance on both training and test data. Solution: Increase model complexity or improve training.
+
+Best Fit: The ideal scenario where the model strikes a balance between complexity and simplicity, performing well on both training and unseen data, without overfitting or underfitting.

@@ -1,0 +1,7 @@
+Supervised Learning: The algorithm learns from labeled data (input-output pairs) to make predictions. It's used for tasks like classification (e.g., spam detection) and regression (e.g., house price prediction).
+
+Unsupervised Learning: The algorithm finds patterns in unlabeled data without predefined outcomes. It's used for clustering (e.g., customer segmentation) and anomaly detection (e.g., fraud detection).
+
+Reinforcement Learning: The model learns by interacting with an environment and receiving feedback through rewards or penalties. It's used in applications like robotics, gaming, and autonomous driving.
+
+Each type of learning is suited to different tasks and data types.
