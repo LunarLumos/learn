@@ -1,6 +1,4 @@
-Sure! Below is a more detailed version of the theory part of your assignment, including code concepts and explanations for each question to help you achieve better marks. 
 
----
 
 ### **Theory Part (Marks - 35)**
 
@@ -11,45 +9,12 @@ Sure! Below is a more detailed version of the theory part of your assignment, in
   - **Data Structure**: **Array**
   - **Explanation**: Mr. Sisir is developing an online ticket booking system. He uses an array to store information about the tickets. An array is a collection of elements stored at contiguous memory locations. This structure allows for efficient access to elements using an index. For example, if he has 100 seats, he can represent them in an array where each index corresponds to a seat number. If he wants to check if seat number 5 is booked, he can simply access `array[4]` (since arrays are zero-indexed) to get the status of that seat. This makes operations like checking availability very fast (O(1) time complexity). However, arrays have limitations, such as a fixed size. If Mr. Sisir needs to add more seats, he would have to create a new larger array and copy the existing data, which can be inefficient.
 
-  - **Code Example**:
-    ```cpp
-    const int MAX_SEATS = 100;
-    bool seats[MAX_SEATS]; // Array to track seat availability
 
-    // Function to check if a seat is available
-    bool isSeatAvailable(int seatNumber) {
-        return !seats[seatNumber - 1]; // Return true if the seat is not booked
-    }
-    ```
 
 - **Mr. Tusher**: 
   - **Data Structure**: **Linked List**
   - **Explanation**: Mr. Tusher is creating a music playlist application. He uses a linked list for this purpose. A linked list consists of nodes where each node contains data and a pointer to the next node. This structure allows for dynamic memory allocation, meaning that the size of the playlist can change as songs are added or removed. For instance, if a user wants to add a new song, Mr. Tusher can create a new node and link it to the existing list without needing to resize an array. This makes it easy to insert or delete songs from any position in the playlist.
 
-  - **Code Example**:
-    ```cpp
-    struct Song {
-        std::string title;
-        Song* next; // Pointer to the next song
-    };
-
-    // Function to add a song to the end of the playlist
-    void addSong(Song*& head, std::string title) {
-        Song* newSong = new Song();
-        newSong->title = title;
-        newSong->next = nullptr;
-
-        if (head == nullptr) {
-            head = newSong; // If the list is empty, new song becomes the head
-        } else {
-            Song* temp = head;
-            while (temp->next != nullptr) {
-                temp = temp->next; // Traverse to the end of the list
-            }
-            temp->next = newSong; // Link the new song
-        }
-    }
-    ```
 
 **Q2. Proving the Adjacency Matrix is Asymmetric**  
 - **Explanation**: An adjacency matrix is a square matrix used to represent a graph. Each cell in the matrix indicates whether pairs of vertices are adjacent or not. For a directed graph, the matrix is asymmetric if the connection from vertex A to vertex B does not imply a connection from vertex B to vertex A. For example, if the cost of traveling from vertex A to vertex B is 10, but the cost from B to A is 15, the matrix will show different values at positions (A, B) and (B, A). This property is important in applications like route planning, where the cost of travel may differ based on direction.
@@ -160,6 +125,4 @@ Sure! Below is a more detailed version of the theory part of your assignment, in
     }
     ```
 
----
 
-This detailed version of the theory part includes explanations, examples, and code snippets to help you achieve better marks. Feel free to adjust any specific details or examples to better fit your understanding or personal experiences. Good luck with your assignment!
