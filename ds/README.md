@@ -77,14 +77,49 @@ By helping Mr. Habib with these steps, Mr. Arif ensured that the BST was correct
 
 #### **Task-2**
 
-**Q5. Minimum Travel Cost from DIU to X**  
-- **Calculation**: To find the minimum travel cost from Daffodil International University (DIU) to location X, we first need to calculate X using the formula: \( X = (last \, two \, digits \, of \, your \, student \, ID \% 6) + 1 \). For example, if the last two digits of your Student ID are 42, then \( X = (42 \% 6) + 1 = 0 + 1 = 1 \). Next, we look at the graph to see how much it costs to travel to vertex 1 from DIU. If the costs to the places connected to DIU are 10, 15, and 20, the minimum cost would be 10. This helps in planning the best route to take.
 
-- **Example**: If the graph shows the following costs:
-    - DIU to A: 10
-    - DIU to B: 15
-    - DIU to C: 20
-  The minimum travel cost to X (vertex 1) would be 10.
+---
+
+### ✅ **Q5. Find out the minimum travel cost from DIU to X of Figure 01 that is made by Mr. Mehedi.**  
+**[X = (Last two digits of your Student ID % 6) + 1]**  
+**Student ID Assumed: 25**
+
+---
+
+### **Step 1: Determine Destination Node (X)**  
+According to the given formula:  
+\[
+X = (25 \mod 6) + 1 = 1 + 1 = 2
+\]  
+Hence, the destination node is **Node 2**, which represents **Sajek Valley**.
+
+---
+
+### **Step 2: Applying Dijkstra’s Algorithm to Find Minimum Cost**
+
+We use **Dijkstra's Algorithm** to calculate the shortest path from the source node (DIU = Node 7) to all other nodes. The graph is weighted and directed, representing travel costs between historical sites.
+
+---
+
+### **Output (Minimum Distance from Node 7 to All Other Nodes):**  
+```
+From Node 7:
+To Node 1 = 50      Path: 7 → 5 → 1  
+To Node 2 = 40      Path: 7 → 6 → 2  
+To Node 3 = 53      Path: 7 → 6 → 2 → 3  
+To Node 4 = 58      Path: 7 → 6 → 5 → 4  
+To Node 5 = 26      Path: 7 → 6 → 5  
+To Node 6 = 15      Path: 7 → 6  
+```
+
+---
+
+### **Final Answer:**
+✅ **The minimum travel cost from DIU (Node 7) to Sajek Valley (Node 2) is 40 units.**  
+➡ **Shortest Path:** 7 → 6 → 2
+
+---
+
 
 **Q6. Determining the Chromatic Number**  
 - **Explanation**: The chromatic number of a graph is the smallest number of colors needed to color the vertices so that no two adjacent vertices share the same color. To find this number, we can start coloring the graph. For example, we can color the first vertex with color 1. Then, we color the adjacent vertices with color 2. We keep doing this until all vertices are colored. If we can do it with just two colors, then the chromatic number is 2. This is important for problems like scheduling, where we want to avoid conflicts.
