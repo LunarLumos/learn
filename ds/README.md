@@ -27,56 +27,53 @@
         B  0   0   15
         C  5   0   0
     ```
-  - Here, there is a directed edge from A to B with a cost of 10, and from B to C with a cost of 15, but not vice versa, proving the matrix is asymmetric.
 
-**Q3. Mr. Arif's Solution to the Challenge**  
-- **Description**: Mr. Arif was tasked with creating a Binary Search Tree (BST) using distinct integer numbers. A BST is a tree data structure where each node has at most two children, and for any given node, the left child's value is less than the parent's value, while the right child's value is greater. Mr. Arif started by inserting the numbers one by one. For example, if he first inserted 26, it became the root. When he inserted 52, it went to the right of 26, and when he inserted 20, it went to the left of 26. This structure allows for efficient searching, as he can quickly decide to go left or right based on the value he is looking for.
-
-- **Code Example**:
-    ```cpp
-    struct TreeNode {
-        int value;
-        TreeNode* left;
-        TreeNode* right;
-    };
-
-    TreeNode* insert(TreeNode* root, int value) {
-        if (root == nullptr) {
-            TreeNode* newNode = new TreeNode();
-            newNode->value = value;
-            newNode->left = newNode->right = nullptr;
-            return newNode;
-        }
-        if (value < root->value) {
-            root->left = insert(root->left, value); // Insert in the left subtree
-        } else {
-            root->right = insert(root->right, value); // Insert in the right subtree
-        }
-        return root;
-    }
-    ```
-
-**Q4. Mr. Arif Helping Mr. Habib**  
-- **Explanation**: Mr. Habib had trouble finding his Student ID in his BST. Mr. Arif helped him by explaining the binary search process. He told Mr. Habib to start at the root and compare his Student ID with the value of the current node. If the Student ID was less than the current node's value, they would move to the left child; if it was greater, they would move to the right child. Mr. Arif demonstrated this process step-by-step, showing how to navigate through the tree until they either found the Student ID or reached a leaf node (indicating that the ID was not present). This method is efficient because it reduces the search space by half with each comparison.
-
-- **Code Example**:
-    ```cpp
-    bool search(TreeNode* root, int value) {
-        if (root == nullptr) {
-            return false; // Value not found
-        }
-        if (root->value == value) {
-            return true; // Value found
-        }
-        if (value < root->value) {
-            return search(root->left, value); // Search in the left subtree
-        } else {
-            return search(root->right, value); // Search in the right subtree
-        }
-    }
-    ```
 
 ---
+
+### Q3. How does Mr. Arif solve the challenge provided by the course instructor? A detailed description is needed.
+
+To solve the challenge, Mr. Arif follows these steps:
+
+1. **Understanding the Constraints**: The first step for Mr. Arif is to understand the constraints provided by the instructor. He needs to select 10 distinct integers between 20 and 200, where:
+   - The first number is always 26.
+   - The fourth number is calculated as XX, based on his Student ID (last two digits of Student ID % 10 + the lowest number selected).
+   - The seventh number is 86.
+   - The ninth number is 52.
+   - There are two numbers less than 35.
+   - No more than four numbers exceed 110.
+
+2. **Selecting the Numbers**: Mr. Arif selects the 10 distinct numbers based on the given constraints. He ensures that two numbers are less than 35, and no more than four numbers exceed 110. He also calculates XX based on his Student ID, which gives him the fourth number.
+
+3. **Building the Binary Search Tree (BST)**: After selecting the numbers, Mr. Arif builds the BST. He starts by inserting 26 as the root, then inserts each subsequent number by comparing it to the current node and placing it either to the left (if smaller) or to the right (if larger). This process continues until all the numbers are inserted into the BST.
+
+4. **Using Binary Search to Find the Student ID**: Once the BST is built, Mr. Arif can use binary search to find his Student ID. He starts at the root and compares the current node with XX (his Student ID). If XX is smaller, he moves to the left child; if it’s larger, he moves to the right child. This process is repeated until he finds the correct node.
+
+By following these steps, Mr. Arif solves the challenge efficiently and finds his Student ID in the BST using binary search.
+
+---
+
+### Q4. How did Mr. Arif solve the difficulties faced by Mr. Habib? Describe with proper explanation.
+
+Mr. Habib successfully built the BST, but he faced difficulties finding his Student ID using binary search. The possible reasons for this are:
+
+1. **Incorrect Calculation of XX**: Mr. Habib may have miscalculated XX, which is based on the last two digits of his Student ID. If this calculation was wrong, the BST structure would be incorrect, making it hard to find his Student ID.
+
+2. **Incorrect Tree Structure**: Mr. Habib might have built the tree incorrectly. If the numbers were not inserted properly (for example, not following the BST property), the tree structure could be invalid, and binary search would not work.
+
+3. **Incorrect Binary Search**: Mr. Habib might not have applied binary search properly. For example, he might not have compared the current node with the target (Student ID) and navigated left or right accordingly.
+
+Mr. Arif, having successfully solved the problem, helped Mr. Habib by:
+
+1. **Correcting the Calculation of XX**: Mr. Arif explained the correct way to calculate XX using the last two digits of Mr. Habib's Student ID, ensuring that the number was calculated accurately.
+
+2. **Fixing the Tree Structure**: If Mr. Habib's tree was incorrectly built, Mr. Arif would have guided him in rebuilding the tree, ensuring that the BST property was followed (left child smaller, right child larger).
+
+3. **Guiding on Binary Search**: Mr. Arif would have explained the steps of binary search clearly, making sure Mr. Habib understood how to compare the current node with the Student ID and navigate left or right accordingly.
+
+By helping Mr. Habib with these steps, Mr. Arif ensured that the BST was correct and binary search was applied successfully to find the Student ID.
+
+--- 
 
 #### **Task-2**
 
