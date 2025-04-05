@@ -168,21 +168,26 @@ Since the given graph is a complete graph with 7 vertices, the **minimum number 
 
 ### **Q7: How Did Mr. Tamim Solve QA and QB?**  
 
-#### **QA Solution by Mr. Tamim (Deleting ‘XX’ from the Linked List)**  
-Mr. Tamim approached the problem systematically by following the standard deletion procedure for a singly linked list:  
+Certainly! Here's an academic and structured explanation for:
 
-1. **Check if the list is empty**: If the head of the linked list is `NULL`, no deletion is required.  
-2. **Check if the first node (head) contains the target value**:  
-   - If `head.data == 'XX'`, update the head to `head.next` to remove the first node.  
-3. **Traverse the list to locate the node containing ‘XX’**:  
-   - Maintain a `current` pointer starting from the head.  
-   - If `current.next.data == 'XX'`, update `current.next` to `current.next.next`, effectively bypassing the target node.  
-4. **Stop the traversal** after the deletion to avoid unnecessary iterations.  
-5. **Edge Cases Considered**:  
-   - The node may not exist → No action is needed.  
-   - The node may be at the end → Adjust the last node’s pointer to `NULL`.  
+---
 
-- **Final Pseudocode Used by Mr. Tamim**:  
+### **Q7: How Did Mr. Tamim Solve QA and QB?**  
+**[Total Marks: 8 – QA: 4 marks, QB: 4 marks]**
+
+---
+
+### **QA: Deleting ‘XX’ from the Singly Linked List**  
+- **Problem**: Given a singly linked list, delete a node whose value is ‘XX’, where `XX = (SGPA from last semester) + 3.21`.
+
+- **Mr. Tamim’s Approach**:
+  - Mr. Tamim recognized that deletion from a singly linked list requires pointer manipulation without random access.
+  - He ensured **three important checks**:
+    1. **Empty List**: If the list is empty, deletion is not possible.
+    2. **Node to Delete is Head**: If the target value is at the head, simply update the head pointer.
+    3. **Traverse for Deletion**: Use a loop to traverse the list and find the node just before the target, then re-link the `next` pointer to skip the target node.
+
+- **Pseudocode Used by Mr. Tamim**:
     ```
     function deleteNode(head, value):
         if head is NULL:
@@ -198,30 +203,21 @@ Mr. Tamim approached the problem systematically by following the standard deleti
         return head
     ```
 
-#### **QB Solution by Mr. Tamim (Reversing the Display Order of a Singly Linked List)**  
-Mr. Tamim correctly identified that **a singly linked list does not support backward traversal**, meaning the list’s structure cannot be modified for reverse printing. However, he provided **two valid solutions**:
+- **Explanation**:
+  - This method ensures that the node containing ‘XX’ is properly removed while preserving the structure and integrity of the linked list.
+  - The approach is **non-destructive** and operates in **O(n)** time with **O(1)** extra space.
 
-1. **Using a Stack (Iterative Approach)**:  
-   - Traverse the list and store each node’s data in a **stack**.  
-   - Since stacks follow the **Last In, First Out (LIFO)** principle, popping the elements results in a **reverse order**.  
+---
 
-   **Pseudocode for Stack-Based Reversal**:  
-    ```
-    function printReverseUsingStack(head):
-        stack ← empty
-        current ← head
-        while current ≠ NULL:
-            push(stack, current.data)
-            current ← current.next
-        while stack is not empty:
-            print pop(stack)
-    ```
+### **QB: Displaying the Singly Linked List in Reverse Order**
 
-2. **Using Recursion (Recursive Approach)**:  
-   - **Recursively traverse** the list until the last node.  
-   - As the function **returns**, print each node’s data, ensuring a **reverse display**.  
+- **Problem**: The task is to print all elements of a singly linked list in reverse order without modifying the list structure.
 
-   **Pseudocode for Recursive Reverse Printing**:  
+- **Mr. Tamim’s Insight**:
+  - Although singly linked lists do not allow backward traversal, Mr. Tamim utilized **recursion** to simulate a reverse traversal.
+  - He also identified that an alternative method using a **stack** is possible, but since the figure and lecture focus on **linked list logic**, recursion is preferred here.
+
+- **Recursive Pseudocode Used**:
     ```
     function printReverse(node):
         if node is NULL:
@@ -230,12 +226,21 @@ Mr. Tamim correctly identified that **a singly linked list does not support back
         print node.data
     ```
 
-#### **Why Mr. Tamim’s Approach is Correct?**  
-- He successfully deleted the node `'XX'` while **preserving the linked list structure**.  
-- He correctly **identified** that singly linked lists do not have backward pointers.  
-- He implemented **two efficient** solutions to print elements in reverse order.  
-- His solutions were **optimal**:  
-  - **Stack-based approach**: \(O(n)\) time and \(O(n)\) space.  
-  - **Recursive approach**: \(O(n)\) time and \(O(n)\) space (due to recursive stack).  
+- **Explanation**:
+  - The function first **recursively travels to the end** of the list.
+  - During the **return phase** of the recursion, it **prints each node’s data**, effectively printing in reverse order.
+  - This approach requires **O(n)** time and **O(n)** space due to the call stack, but it is efficient and elegant for this task.
+  - Most importantly, this solution **does not alter the original list**, fulfilling the requirement of non-destructive reverse display.
 
-Thus, Mr. Tamim demonstrated a **clear understanding of linked list operations**, solving both QA and QB efficiently. 🎯
+---
+
+### **Conclusion**:  
+Mr. Tamim demonstrated a deep understanding of linked list operations:
+- He applied **pointer logic** carefully to solve the deletion problem without using any extra memory.
+- He respected the **constraints of singly linked lists** by choosing recursion to reverse display, ensuring both correctness and adherence to data structure principles.
+
+His solution was accurate, efficient, and reflected strong conceptual clarity in data structure manipulation.
+
+--- 
+
+Let me know if you'd like this formatted into a printable report or PDF!
