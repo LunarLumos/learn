@@ -166,35 +166,76 @@ Since the given graph is a complete graph with 7 vertices, the **minimum number 
 **Final Answer:**  
 **The chromatic number of Figure 01 is 7, meaning we need 7 different colors to color the vertices correctly.**
 
-**Q7. Mr. Tamim's Solutions to QA and QB**  
-- **QA**: 
-  - **Pseudocode to Delete ‘XX’**: 
+### **Q7: How Did Mr. Tamim Solve QA and QB?**  
+
+#### **QA Solution by Mr. Tamim (Deleting ‘XX’ from the Linked List)**  
+Mr. Tamim approached the problem systematically by following the standard deletion procedure for a singly linked list:  
+
+1. **Check if the list is empty**: If the head of the linked list is `NULL`, no deletion is required.  
+2. **Check if the first node (head) contains the target value**:  
+   - If `head.data == 'XX'`, update the head to `head.next` to remove the first node.  
+3. **Traverse the list to locate the node containing ‘XX’**:  
+   - Maintain a `current` pointer starting from the head.  
+   - If `current.next.data == 'XX'`, update `current.next` to `current.next.next`, effectively bypassing the target node.  
+4. **Stop the traversal** after the deletion to avoid unnecessary iterations.  
+5. **Edge Cases Considered**:  
+   - The node may not exist → No action is needed.  
+   - The node may be at the end → Adjust the last node’s pointer to `NULL`.  
+
+- **Final Pseudocode Used by Mr. Tamim**:  
     ```
     function deleteNode(head, value):
-        if head is None:
+        if head is NULL:
             return head
-        if head.value == value:
+        if head.data == value:
             return head.next
-        current = head
-        while current.next is not None:
-            if current.next.value == value:
-                current.next = current.next.next
+        current ← head
+        while current.next ≠ NULL:
+            if current.next.data == value:
+                current.next ← current.next.next
                 return head
-            current = current.next
+            current ← current.next
         return head
     ```
-  - **Explanation**: This pseudocode shows how to delete a node with a specific value from a linked list. It first checks if the list is empty. If the first node has the value we want to delete, it just returns the next node as the new head. If not, it goes through the list to find the node with the value. When it finds it, it skips that node by changing the pointer, effectively removing it from the list.
 
-- **QB**: 
-  - **Explanation**: Yes, we can display the elements of a singly linked list in reverse order. One way to do this is by using a stack. We can go through the linked list and push each element onto the stack. When we pop elements from the stack, they come out in reverse order. Another way is to use recursion. We can call a function for the next node before printing the current node’s value. This way, the last node gets printed first, achieving the reverse order.
+#### **QB Solution by Mr. Tamim (Reversing the Display Order of a Singly Linked List)**  
+Mr. Tamim correctly identified that **a singly linked list does not support backward traversal**, meaning the list’s structure cannot be modified for reverse printing. However, he provided **two valid solutions**:
 
-- **Code Example for Reversing a Linked List**:
-    ```cpp
-    void printReverse(Song* head) {
-        if (head == nullptr) return; // Base case
-        printReverse(head->next); // Recursive call
-        std::cout << head->title << std::endl; // Print the current song after returning
-    }
+1. **Using a Stack (Iterative Approach)**:  
+   - Traverse the list and store each node’s data in a **stack**.  
+   - Since stacks follow the **Last In, First Out (LIFO)** principle, popping the elements results in a **reverse order**.  
+
+   **Pseudocode for Stack-Based Reversal**:  
+    ```
+    function printReverseUsingStack(head):
+        stack ← empty
+        current ← head
+        while current ≠ NULL:
+            push(stack, current.data)
+            current ← current.next
+        while stack is not empty:
+            print pop(stack)
     ```
 
+2. **Using Recursion (Recursive Approach)**:  
+   - **Recursively traverse** the list until the last node.  
+   - As the function **returns**, print each node’s data, ensuring a **reverse display**.  
 
+   **Pseudocode for Recursive Reverse Printing**:  
+    ```
+    function printReverse(node):
+        if node is NULL:
+            return
+        printReverse(node.next)
+        print node.data
+    ```
+
+#### **Why Mr. Tamim’s Approach is Correct?**  
+- He successfully deleted the node `'XX'` while **preserving the linked list structure**.  
+- He correctly **identified** that singly linked lists do not have backward pointers.  
+- He implemented **two efficient** solutions to print elements in reverse order.  
+- His solutions were **optimal**:  
+  - **Stack-based approach**: \(O(n)\) time and \(O(n)\) space.  
+  - **Recursive approach**: \(O(n)\) time and \(O(n)\) space (due to recursive stack).  
+
+Thus, Mr. Tamim demonstrated a **clear understanding of linked list operations**, solving both QA and QB efficiently. 🎯
