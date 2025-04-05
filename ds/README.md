@@ -122,9 +122,49 @@ To Node 6 = 15      Path: 7 → 6
 
 
 **Q6. Determining the Chromatic Number**  
-- **Explanation**: The chromatic number of a graph is the smallest number of colors needed to color the vertices so that no two adjacent vertices share the same color. To find this number, we can start coloring the graph. For example, we can color the first vertex with color 1. Then, we color the adjacent vertices with color 2. We keep doing this until all vertices are colored. If we can do it with just two colors, then the chromatic number is 2. This is important for problems like scheduling, where we want to avoid conflicts.
+To determine the **chromatic number** of the given directed graph, we need to find the **minimum number of colors** required to color the vertices such that no two adjacent vertices share the same color. Let's go step by step to understand how to calculate it.  
 
-- **Example**: If we have a graph with three vertices connected in a triangle, we would need three colors to color them so that no two adjacent vertices have the same color. Thus, the chromatic number would be 3.
+---
+
+### **Step 1: Understanding the Graph**  
+Looking at **Figure 01**, we can see that the graph represents **historical places as vertices** and **travel costs as weighted edges** between them. The presence of an edge between two vertices means that these locations are directly connected.  
+
+Since every vertex in the graph has direct edges to multiple other vertices, it is important to analyze the structure to determine the chromatic number correctly.  
+
+---
+
+### **Step 2: Identifying the Graph Type**  
+From observation, we notice that:  
+- Every vertex is connected to multiple other vertices.  
+- The graph appears to be **fully connected**, meaning each vertex has edges connecting it to every other vertex.  
+- A fully connected graph with \( n \) vertices is called a **complete graph** and is denoted as \( K_n \).  
+
+To confirm, let's count the number of vertices and check their connections:  
+- The graph has **7 vertices** (representing historical places).  
+- Each vertex is directly connected to the other 6 vertices, meaning **every vertex shares an edge with all others**.  
+
+Since each vertex is connected to all others, this is a **complete graph** \( K_7 \).  
+
+---
+
+### **Step 3: Chromatic Number of a Complete Graph**  
+For a **complete graph \( K_n \)**, the chromatic number is always equal to the number of vertices. This is because:  
+- Every vertex is adjacent to every other vertex.  
+- Since adjacent vertices **must** have different colors, each vertex must be assigned a unique color.  
+
+Thus, for \( K_7 \), the chromatic number is:  
+\[
+\chi(K_7) = 7
+\]  
+This means we need **7 different colors** to properly color this graph while ensuring that no two adjacent vertices have the same color.  
+
+---
+
+### **Step 4: Conclusion**  
+Since the given graph is a complete graph with 7 vertices, the **minimum number of colors required (chromatic number) is 7**.  
+
+**Final Answer:**  
+**The chromatic number of Figure 01 is 7, meaning we need 7 different colors to color the vertices correctly.**
 
 **Q7. Mr. Tamim's Solutions to QA and QB**  
 - **QA**: 
