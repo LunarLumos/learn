@@ -161,3 +161,107 @@ sub inorder {
 
 ## **উপসংহার**
 এই কাস্টম প্যাকেজগুলো **Stellarisys** টুলের জন্য অপরিহার্য ডেটা স্ট্রাকচার প্রদান করে, যা এলার্টগুলো কার্যকরভাবে পরিচালনা করতে, সংযোগগুলো ট্র্যাক করতে এবং ইউনিক IP ঠিকানাগুলো সংরক্ষণ করতে সক্ষম। এই প্যাকেজগুলো বুঝতে পারলে আপনি টুলটি কিভাবে লগ ডেটা প্রক্রিয়া করে এবং সম্ভাব্য নিরাপত্তা হুমকি সনাক্ত করে তা grasp করতে পারবেন। যদি আপনার কোনো নির্দিষ্ট প্রশ্ন থাকে বা কোনো অংশ সম্পর্কে আরও ব্যাখ্যা প্রয়োজন হয়, তাহলে নির্দ্বিধায় জিজ্ঞাসা করুন!
+Sure! Here’s a comprehensive A to Z breakdown of the **Stellarisys** tool's process, detailing each step from start to finish in a clear and structured manner, using an algorithmic approach.
+
+---
+
+## **A to Z Process of Stellarisys Tool**
+
+### **A. Start**
+- Begin the execution of the script.
+
+### **B. Command-Line Options Handling**
+1. **Parse Command-Line Arguments**:
+   - Check for the help flag (`-h` or `--help`):
+     - If present, display the help message and exit.
+   - Check for the log file option (`-l <file>`):
+     - If provided, set the variable `logfile` to the specified file name.
+   - Check for the output file option (`-o <file>`):
+     - If provided, set the variable `outfile` to the specified file name.
+
+### **C. Log Data Acquisition**
+2. **Read Log Data**:
+   - If `logfile` is defined:
+     - Open the file and read all lines into an array called `lines[]`.
+     - Close the file after reading.
+   - If `logfile` is not defined:
+     - Check for standard input.
+     - If standard input is not available, print an error message and exit.
+     - If available, read all lines from standard input into `lines[]`.
+
+### **D. Data Structures Initialization**
+3. **Initialize Data Structures**:
+   - Create a new instance of `LinkedList` to store alerts.
+   - Create a new instance of `Queue` to track login requests.
+   - Create a new instance of `Graph` to represent connections between IP addresses.
+   - Create a new instance of `Binary Search Tree (BST)` to store unique IP addresses.
+
+### **E. Attack Patterns Definition**
+4. **Define Attack Patterns**:
+   - Create an array of attack patterns, each containing:
+     - A name (e.g., "SQL_INJECTION").
+     - A regex pattern to match the attack.
+     - A color code for formatting alerts.
+
+### **F. Log Analysis Loop**
+5. **Analyze Each Log Line**:
+   - For each line in `lines[]`:
+     - Remove any trailing newline characters.
+     - Extract the IP address from the line.
+     - Initialize a flag `t_found` to false (indicating no attack found yet).
+     - Insert the extracted IP address into the BST.
+     - If there is a previous IP address (`last_ip`), add a connection in the Graph.
+     - Update `last_ip` to the current IP address.
+
+### **G. Attack Detection**
+6. **Check for Attack Patterns**:
+   - For each attack pattern in the defined patterns:
+     - Check if the current line matches the attack pattern using regex.
+     - If a match is found:
+       - Construct an alert message.
+       - Print the alert message to the console.
+       - Add the alert to the LinkedList.
+       - Send the alert to Telegram.
+       - Set `t_found` to true and break out of the loop.
+
+### **H. Brute Force Detection**
+7. **Detect Brute Force Attempts**:
+   - If the line contains "login.php":
+     - Enqueue the line into the Queue.
+     - If the size of the Queue exceeds a predefined threshold (e.g., 5):
+       - Dequeue the oldest request from the Queue.
+       - Construct a brute force alert message.
+       - Print the brute force alert message to the console.
+       - Add the brute force alert to the LinkedList.
+       - Send the brute force alert to Telegram.
+       - Set `t_found` to true.
+
+### **I. Safe Line Output**
+8. **Print Safe Lines**:
+   - If no attack was detected (`t_found` is false):
+     - Print the line as "SAFE".
+
+### **J. Summary Output**
+9. **Print Summary of Alerts**:
+   - After processing all lines, print a summary header.
+   - Call the `show_all` method of the LinkedList to print all stored alerts.
+   - Print a summary footer.
+
+### **K. End**
+10. **Conclude Execution**:
+    - The tool finishes execution, providing the user with a comprehensive overview of detected security threats.
+
+---
+
+## **Example Scenario**
+1. **Execution**: You run the tool with a command like:
+   ```bash
+   perl stellarisys.pl -l server_logs.txt
+   ```
+2. **Processing**: The tool reads the log file, analyzes each line for attack patterns, and detects any suspicious activity.
+3. **Alerts**: If an SQL injection is detected, an alert is generated, printed, and sent to your Telegram.
+4. **Summary**: After processing, the tool provides a summary of all alerts detected during the analysis.
+
+---
+
+This A to Z breakdown provides a clear and structured overview of how the **Stellarisys** tool operates, detailing the steps taken to analyze log data and manage alerts in a straightforward manner. If you have any further questions or need clarification on specific parts, feel free to ask!
