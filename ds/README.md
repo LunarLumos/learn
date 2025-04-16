@@ -1,246 +1,163 @@
-
-
-### **Theory Part (Marks - 35)**
-
-#### **Task-1**
-
-**Q1. Data Structures Used by Mr. Sisir and Mr. Tusher**  
-- **Mr. Sisir**: 
-  - **Data Structure**: **Array**
-  - **Explanation**: Mr. Sisir is developing an online ticket booking system. He uses an array to store information about the tickets. An array is a collection of elements stored at contiguous memory locations. This structure allows for efficient access to elements using an index. For example, if he has 100 seats, he can represent them in an array where each index corresponds to a seat number. If he wants to check if seat number 5 is booked, he can simply access `array[4]` (since arrays are zero-indexed) to get the status of that seat. This makes operations like checking availability very fast (O(1) time complexity). However, arrays have limitations, such as a fixed size. If Mr. Sisir needs to add more seats, he would have to create a new larger array and copy the existing data, which can be inefficient.
-
-
-
-- **Mr. Tusher**: 
-  - **Data Structure**: **Linked List**
-  - **Explanation**: Mr. Tusher is creating a music playlist application. He uses a linked list for this purpose. A linked list consists of nodes where each node contains data and a pointer to the next node. This structure allows for dynamic memory allocation, meaning that the size of the playlist can change as songs are added or removed. For instance, if a user wants to add a new song, Mr. Tusher can create a new node and link it to the existing list without needing to resize an array. This makes it easy to insert or delete songs from any position in the playlist.
-
-
-**Q2. Proving the Adjacency Matrix is Asymmetric**  
-- **Explanation**: An adjacency matrix is a square matrix used to represent a graph. Each cell in the matrix indicates whether pairs of vertices are adjacent or not. For a directed graph, the matrix is asymmetric if the connection from vertex A to vertex B does not imply a connection from vertex B to vertex A. For example, if the cost of traveling from vertex A to vertex B is 10, but the cost from B to A is 15, the matrix will show different values at positions (A, B) and (B, A). This property is important in applications like route planning, where the cost of travel may differ based on direction.
-
-- **Example**:
-  - Consider a graph with vertices A, B, and C. The adjacency matrix might look like this:
-    ```
-          A   B   C
-        A  0   10  0
-        B  0   0   15
-        C  5   0   0
-    ```
-
+অবশ্যই! আসুন **Stellarisys** Perl স্ক্রিপ্টের কাস্টম প্যাকেজগুলোকে বাংলায় বিস্তারিতভাবে ব্যাখ্যা করি।
 
 ---
 
-### Q3. How does Mr. Arif solve the challenge provided by the course instructor? A detailed description is needed.
+## **Stellarisys-এ কাস্টম প্যাকেজগুলো**
 
-To solve the challenge, Mr. Arif follows these steps:
+### **1. LinkedList প্যাকেজ**
+`LinkedList` প্যাকেজটি এলার্টগুলো সংরক্ষণের জন্য একটি লিঙ্কড লিস্ট স্ট্রাকচার ব্যবহার করে।
 
-1. **Understanding the Constraints**: The first step for Mr. Arif is to understand the constraints provided by the instructor. He needs to select 10 distinct integers between 20 and 200, where:
-   - The first number is always 26.
-   - The fourth number is calculated as XX, based on his Student ID (last two digits of Student ID % 10 + the lowest number selected).
-   - The seventh number is 86.
-   - The ninth number is 52.
-   - There are two numbers less than 35.
-   - No more than four numbers exceed 110.
-
-2. **Selecting the Numbers**: Mr. Arif selects the 10 distinct numbers based on the given constraints. He ensures that two numbers are less than 35, and no more than four numbers exceed 110. He also calculates XX based on his Student ID, which gives him the fourth number.
-
-3. **Building the Binary Search Tree (BST)**: After selecting the numbers, Mr. Arif builds the BST. He starts by inserting 26 as the root, then inserts each subsequent number by comparing it to the current node and placing it either to the left (if smaller) or to the right (if larger). This process continues until all the numbers are inserted into the BST.
-
-4. **Using Binary Search to Find the Student ID**: Once the BST is built, Mr. Arif can use binary search to find his Student ID. He starts at the root and compares the current node with XX (his Student ID). If XX is smaller, he moves to the left child; if it’s larger, he moves to the right child. This process is repeated until he finds the correct node.
-
-By following these steps, Mr. Arif solves the challenge efficiently and finds his Student ID in the BST using binary search.
-
----
-
-### Q4. How did Mr. Arif solve the difficulties faced by Mr. Habib? Describe with proper explanation.
-
-Mr. Habib successfully built the BST, but he faced difficulties finding his Student ID using binary search. The possible reasons for this are:
-
-1. **Incorrect Calculation of XX**: Mr. Habib may have miscalculated XX, which is based on the last two digits of his Student ID. If this calculation was wrong, the BST structure would be incorrect, making it hard to find his Student ID.
-
-2. **Incorrect Tree Structure**: Mr. Habib might have built the tree incorrectly. If the numbers were not inserted properly (for example, not following the BST property), the tree structure could be invalid, and binary search would not work.
-
-3. **Incorrect Binary Search**: Mr. Habib might not have applied binary search properly. For example, he might not have compared the current node with the target (Student ID) and navigated left or right accordingly.
-
-Mr. Arif, having successfully solved the problem, helped Mr. Habib by:
-
-1. **Correcting the Calculation of XX**: Mr. Arif explained the correct way to calculate XX using the last two digits of Mr. Habib's Student ID, ensuring that the number was calculated accurately.
-
-2. **Fixing the Tree Structure**: If Mr. Habib's tree was incorrectly built, Mr. Arif would have guided him in rebuilding the tree, ensuring that the BST property was followed (left child smaller, right child larger).
-
-3. **Guiding on Binary Search**: Mr. Arif would have explained the steps of binary search clearly, making sure Mr. Habib understood how to compare the current node with the Student ID and navigate left or right accordingly.
-
-By helping Mr. Habib with these steps, Mr. Arif ensured that the BST was correct and binary search was applied successfully to find the Student ID.
-
---- 
-
-#### **Task-2**
-
-
----
-
-### ✅ **Q5. Find out the minimum travel cost from DIU to X of Figure 01 that is made by Mr. Mehedi.**  
-**[X = (Last two digits of your Student ID % 6) + 1]**  
-**Student ID Assumed: 25**
-
----
-
-### **Step 1: Determine Destination Node (X)**  
-According to the given formula:  
-\[
-X = (25 \mod 6) + 1 = 1 + 1 = 2
-\]  
-Hence, the destination node is **Node 2**, which represents **Sajek Valley**.
-
----
-
-### **Step 2: Applying Dijkstra’s Algorithm to Find Minimum Cost**
-
-We use **Dijkstra's Algorithm** to calculate the shortest path from the source node (DIU = Node 7) to all other nodes. The graph is weighted and directed, representing travel costs between historical sites.
-
----
-
-### **Output (Minimum Distance from Node 7 to All Other Nodes):**  
-```
-From Node 7:
-To Node 1 = 50      Path: 7 → 5 → 1  
-To Node 2 = 40      Path: 7 → 6 → 2  
-To Node 3 = 53      Path: 7 → 6 → 2 → 3  
-To Node 4 = 58      Path: 7 → 6 → 5 → 4  
-To Node 5 = 26      Path: 7 → 6 → 5  
-To Node 6 = 15      Path: 7 → 6  
+#### **কোড ব্যাখ্যা**
+```perl
+package LinkedList;
+sub new       { bless { head => undef }, shift }
+sub add       { my ($s, $d) = @_; $s->{head} = { data => $d, next => $s->{head} } }
+sub show_all  { my $c = $_[0]->{head}; while ($c) { print $c->{data}; $c = $c->{next} } }
 ```
 
+#### **উপাদানগুলো**
+- **`package LinkedList;`**: একটি নতুন প্যাকেজ `LinkedList` সংজ্ঞায়িত করে।
+- **`sub new { ... }`**: নতুন লিঙ্কড লিস্ট তৈরি করার জন্য কনস্ট্রাক্টর মেথড।
+  - **`bless { head => undef }, shift`**: লিস্টটি `head` অ্যাট্রিবিউট দিয়ে শুরু করে, যা `undef` দিয়ে ইনিশিয়ালাইজ করা হয়, অর্থাৎ লিস্টটি খালি।
+
+- **`sub add { ... }`**: লিঙ্কড লিস্টে একটি নতুন উপাদান যোগ করার মেথড।
+  - **`my ($s, $d) = @_;`**: লিঙ্কড লিস্ট অবজেক্ট (`$s`) এবং যোগ করার ডেটা (`$d`) গ্রহণ করে।
+  - **`$s->{head} = { data => $d, next => $s->{head} }`**: নতুন নোড তৈরি করে এবং তার `next` কে বর্তমান `head` এর দিকে নির্দেশ করে, ফলে এটি লিস্টের শুরুতে যুক্ত হয়।
+
+- **`sub show_all { ... }`**: লিঙ্কড লিস্টের সব উপাদান প্রদর্শনের মেথড।
+  - **`my $c = $_[0]->{head};`**: লিস্টের `head` থেকে শুরু করে।
+  - **`while ($c) { ... }`**: লিস্টের শেষ পর্যন্ত প্রতিটি নোডের মধ্য দিয়ে লুপ করে।
+  - **`print $c->{data};`**: বর্তমান নোডের ডেটা প্রিন্ট করে।
+  - **`$c = $c->{next};`**: পরবর্তী নোডে চলে যায়।
+
+### **2. Stack প্যাকেজ**
+`Stack` প্যাকেজটি একটি স্ট্যাক ডেটা স্ট্রাকচার বাস্তবায়ন করে, যা লাস্ট ইন ফার্স্ট আউট (LIFO) নীতি অনুসরণ করে।
+
+#### **কোড ব্যাখ্যা**
+```perl
+package Stack;
+sub new       { bless { items => [] }, shift }
+sub push      { push @{$_[0]->{items}}, $_[1] }
+sub pop       { pop @{$_[0]->{items}} }
+```
+
+#### **উপাদানগুলো**
+- **`package Stack;`**: একটি নতুন প্যাকেজ `Stack` সংজ্ঞায়িত করে।
+- **`sub new { ... }`**: নতুন স্ট্যাক তৈরি করার জন্য কনস্ট্রাক্টর মেথড।
+  - **`bless { items => [] }, shift`**: স্ট্যাকটি একটি খালি অ্যারে `items` দিয়ে ইনিশিয়ালাইজ করে।
+
+- **`sub push { ... }`**: স্ট্যাকের শীর্ষে একটি আইটেম যোগ করার মেথড।
+  - **`push @{$_[0]->{items}}, $_[1]`**: প্রদত্ত আইটেম (`$_[1]`) `items` অ্যারেতে যোগ করে।
+
+- **`sub pop { ... }`**: স্ট্যাকের শীর্ষ থেকে একটি আইটেম মুছে ফেলার এবং ফেরত দেওয়ার মেথড।
+  - **`pop @{$_[0]->{items}}`**: `items` অ্যারেতে থেকে শেষ আইটেমটি মুছে ফেলে এবং ফেরত দেয়।
+
+### **3. Queue প্যাকেজ**
+`Queue` প্যাকেজটি একটি কিউ ডেটা স্ট্রাকচার বাস্তবায়ন করে, যা ফার্স্ট ইন ফার্স্ট আউট (FIFO) নীতি অনুসরণ করে।
+
+#### **কোড ব্যাখ্যা**
+```perl
+package Queue;
+sub new       { bless { items => [] }, shift }
+sub enqueue   { push @{$_[0]->{items}}, $_[1] }
+sub dequeue   { shift @{$_[0]->{items}} }
+sub size      { scalar @{$_[0]->{items}} }
+```
+
+#### **উপাদানগুলো**
+- **`package Queue;`**: একটি নতুন প্যাকেজ `Queue` সংজ্ঞায়িত করে।
+- **`sub new { ... }`**: নতুন কিউ তৈরি করার জন্য কনস্ট্রাক্টর মেথড।
+  - **`bless { items => [] }, shift`**: কিউটি একটি খালি অ্যারে `items` দিয়ে ইনিশিয়ালাইজ করে।
+
+- **`sub enqueue { ... }`**: কিউয়ের শেষে একটি আইটেম যোগ করার মেথড।
+  - **`push @{$_[0]->{items}}, $_[1]`**: প্রদত্ত আইটেম (`$_[1]`) `items` অ্যারেতে যোগ করে।
+
+- **`sub dequeue { ... }`**: কিউয়ের সামনে থেকে একটি আইটেম মুছে ফেলার এবং ফেরত দেওয়ার মেথড।
+  - **`shift @{$_[0]->{items}}`**: `items` অ্যারেতে থেকে প্রথম আইটেমটি মুছে ফেলে এবং ফেরত দেয়।
+
+- **`sub size { ... }`**: কিউয়ের মধ্যে আইটেমের সংখ্যা পাওয়ার মেথড।
+  - **`scalar @{$_[0]->{items}}`**: `items` অ্যারেতে আইটেমের সংখ্যা ফেরত দেয়।
+
+### **4. Graph প্যাকেজ**
+`Graph` প্যাকেজটি একটি গ্রাফ ডেটা স্ট্রাকচার বাস্তবায়ন করে, যা নোডগুলোর (এক্ষেত্রে, IP ঠিকানাগুলোর) মধ্যে সংযোগগুলি উপস্থাপন করে।
+
+#### **কোড ব্যাখ্যা**
+```perl
+package Graph;
+sub new            { bless { nodes => {} }, shift }
+sub add_connection { my ($s, $u, $v) = @_; $s->{nodes}{$u}{$v} = $s->{nodes}{$v}{$u} = 1 }
+sub print_graph    { my $s = shift; while (my ($n, $e) = each %{$s->{nodes}}) {
+                        print "$n -> ", join(', ', keys %$e), "\n";
+                    }}
+```
+
+#### **উপাদানগুলো**
+- **`package Graph;`**: একটি নতুন প্যাকেজ `Graph` সংজ্ঞায়িত করে।
+- **`sub new { ... }`**: নতুন গ্রাফ তৈরি করার জন্য কনস্ট্রাক্টর মেথড।
+  - **`bless { nodes => {} }, shift`**: গ্রাফটি একটি হ্যাশ `nodes` দিয়ে ইনিশিয়ালাইজ করে, যা সংযোগগুলি ধারণ করে।
+
+- **`sub add_connection { ... }`**: দুটি নোডের মধ্যে সংযোগ যোগ করার মেথড।
+  - **`my ($s, $u, $v) = @_;`**: গ্রাফ অবজেক্ট (`$s`) এবং দুটি নোড (`$u` এবং `$v`) গ্রহণ করে।
+  - **`$s->{nodes}{$u}{$v} = $s->{nodes}{$v}{$u} = 1;`**: নোড `u` এবং `v` এর মধ্যে দ্বিমুখী সংযোগ তৈরি করে।
+
+- **`sub print_graph { ... }`**: গ্রাফের সংযোগগুলি প্রিন্ট করার মেথড।
+  - **`my $s = shift;`**: গ্রাফ অবজেক্ট গ্রহণ করে।
+  - **`while (my ($n, $e) = each %{$s->{nodes}}) { ... }`**: প্রতিটি নোড এবং তার এজগুলোর মধ্য দিয়ে লুপ করে।
+  - **`print "$n -> ", join(', ', keys %$e), "\n";`**: নোড এবং তার সংযুক্ত নোডগুলো প্রিন্ট করে।
+
+### **5. BST (Binary Search Tree) প্যাকেজ**
+`BST` প্যাকেজটি একটি বাইনারি সার্চ ট্রি বাস্তবায়ন করে, যা ইউনিক IP ঠিকানাগুলো সংরক্ষণ করে।
+
+#### **কোড ব্যাখ্যা**
+```perl
+package BST;
+sub new     { bless { root => undef }, shift }
+sub insert  {
+    my ($s, $v) = @_;
+    my $n = \$s->{root};
+    while ($$n) {
+        $n = $v lt $$n->{value} ? \$$n->{left} : \$$n->{right};
+    }
+    $$n = { value => $v, left => undef, right => undef };
+}
+sub inorder {
+    my $s = shift;
+    my (@stack, $c) = ();
+    $c = $s->{root};
+    while (@stack || defined $c) {
+        if (defined $c) {
+            push @stack, $c;
+            $c = $c->{left};
+        } else {
+            $c = pop @stack;
+            print $c->{value}, "\n";
+            $c = $c->{right};
+        }
+    }
+}
+```
+
+#### **উপাদানগুলো**
+- **`package BST;`**: একটি নতুন প্যাকেজ `BST` সংজ্ঞায়িত করে।
+- **`sub new { ... }`**: নতুন বাইনারি সার্চ ট্রি তৈরি করার জন্য কনস্ট্রাক্টর মেথড।
+  - **`bless { root => undef }, shift`**: ট্রিটি একটি `root` অ্যাট্রিবিউট দিয়ে ইনিশিয়ালাইজ করে, যা `undef`।
+
+- **`sub insert { ... }`**: একটি মান বাইনারি সার্চ ট্রিতে যোগ করার মেথড।
+  - **`my ($s, $v) = @_;`**: BST অবজেক্ট (`$s`) এবং যোগ করার মান (`$v`) গ্রহণ করে।
+  - **`my $n = \$s->{root};`**: ট্রির রুট থেকে শুরু করে।
+  - **`while ($$n) { ... }`**: নতুন মানের জন্য একটি খালি স্থান খুঁজে বের করার জন্য লুপ করে।
+    - **`$n = $v lt $$n->{value} ? \$$n->{left} : \$$n->{right};`**: মানের তুলনা করে বাম বা ডানে যেতে সিদ্ধান্ত নেয়।
+  - **`$$n = { value => $v, left => undef, right => undef };`**: নতুন নোড তৈরি করে এবং তার সন্তানগুলোকে `undef` সেট করে।
+
+- **`sub inorder { ... }`**: বাইনারি সার্চ ট্রির ইন-অর্ডার ট্রাভার্সাল করার মেথড।
+  - **`my $s = shift;`**: BST অবজেক্ট গ্রহণ করে।
+  - **`my (@stack, $c) = ();`**: একটি স্ট্যাক এবং একটি বর্তমান নোড ভেরিয়েবল ইনিশিয়ালাইজ করে।
+  - **`$c = $s->{root};`**: ট্রির রুট থেকে শুরু করে।
+  - **`while (@stack || defined $c) { ... }`**: স্ট্যাক খালি না হওয়া এবং বর্তমান নোড `undefined` না হওয়া পর্যন্ত লুপ করে।
+    - **`if (defined $c) { ... }`**: যদি বর্তমান নোড `defined` হয়, তাহলে এটি স্ট্যাকে যোগ করে এবং বামে চলে যায়।
+    - **`else { ... }`**: যদি বর্তমান নোড `undefined` হয়, তাহলে স্ট্যাক থেকে পপ করে, মান প্রিন্ট করে এবং ডানে চলে যায়।
+
 ---
 
-### **Final Answer:**
-✅ **The minimum travel cost from DIU (Node 7) to Sajek Valley (Node 2) is 40 units.**  
-➡ **Shortest Path:** 7 → 6 → 2
-
----
-
-
-**Q6. Determining the Chromatic Number**  
-To determine the **chromatic number** of the given directed graph, we need to find the **minimum number of colors** required to color the vertices such that no two adjacent vertices share the same color. Let's go step by step to understand how to calculate it.  
-
----
-
-### **Step 1: Understanding the Graph**  
-Looking at **Figure 01**, we can see that the graph represents **historical places as vertices** and **travel costs as weighted edges** between them. The presence of an edge between two vertices means that these locations are directly connected.  
-
-Since every vertex in the graph has direct edges to multiple other vertices, it is important to analyze the structure to determine the chromatic number correctly.  
-
----
-
-### **Step 2: Identifying the Graph Type**  
-From observation, we notice that:  
-- Every vertex is connected to multiple other vertices.  
-- The graph appears to be **fully connected**, meaning each vertex has edges connecting it to every other vertex.  
-- A fully connected graph with \( n \) vertices is called a **complete graph** and is denoted as \( K_n \).  
-
-To confirm, let's count the number of vertices and check their connections:  
-- The graph has **7 vertices** (representing historical places).  
-- Each vertex is directly connected to the other 6 vertices, meaning **every vertex shares an edge with all others**.  
-
-Since each vertex is connected to all others, this is a **complete graph** \( K_7 \).  
-
----
-
-### **Step 3: Chromatic Number of a Complete Graph**  
-For a **complete graph \( K_n \)**, the chromatic number is always equal to the number of vertices. This is because:  
-- Every vertex is adjacent to every other vertex.  
-- Since adjacent vertices **must** have different colors, each vertex must be assigned a unique color.  
-
-Thus, for \( K_7 \), the chromatic number is:  
-\[
-\chi(K_7) = 7
-\]  
-This means we need **7 different colors** to properly color this graph while ensuring that no two adjacent vertices have the same color.  
-
----
-
-### **Step 4: Conclusion**  
-Since the given graph is a complete graph with 7 vertices, the **minimum number of colors required (chromatic number) is 7**.  
-
-**Final Answer:**  
-**The chromatic number of Figure 01 is 7, meaning we need 7 different colors to color the vertices correctly.**
-
-### **Q7: How Did Mr. Tamim Solve QA and QB?**  
-
-Certainly! Here's an academic and structured explanation for:
-
----
-
-### **Q7: How Did Mr. Tamim Solve QA and QB?**  
-**[Total Marks: 8 – QA: 4 marks, QB: 4 marks]**
-
----
-
-### **QA: Deleting ‘XX’ from the Singly Linked List**  
-- **Problem**: Given a singly linked list, delete a node whose value is ‘XX’, where `XX = (SGPA from last semester) + 3.21`.
-
-- **Mr. Tamim’s Approach**:
-  - Mr. Tamim recognized that deletion from a singly linked list requires pointer manipulation without random access.
-  - He ensured **three important checks**:
-    1. **Empty List**: If the list is empty, deletion is not possible.
-    2. **Node to Delete is Head**: If the target value is at the head, simply update the head pointer.
-    3. **Traverse for Deletion**: Use a loop to traverse the list and find the node just before the target, then re-link the `next` pointer to skip the target node.
-
-- **Pseudocode Used by Mr. Tamim**:
-    ```
-    function deleteNode(head, value):
-        if head is NULL:
-            return head
-        if head.data == value:
-            return head.next
-        current ← head
-        while current.next ≠ NULL:
-            if current.next.data == value:
-                current.next ← current.next.next
-                return head
-            current ← current.next
-        return head
-    ```
-
-- **Explanation**:
-  - This method ensures that the node containing ‘XX’ is properly removed while preserving the structure and integrity of the linked list.
-  - The approach is **non-destructive** and operates in **O(n)** time with **O(1)** extra space.
-
----
-
-### **QB: Displaying the Singly Linked List in Reverse Order**
-
-- **Problem**: The task is to print all elements of a singly linked list in reverse order without modifying the list structure.
-
-- **Mr. Tamim’s Insight**:
-  - Although singly linked lists do not allow backward traversal, Mr. Tamim utilized **recursion** to simulate a reverse traversal.
-  - He also identified that an alternative method using a **stack** is possible, but since the figure and lecture focus on **linked list logic**, recursion is preferred here.
-
-- **Recursive Pseudocode Used**:
-    ```
-    function printReverse(node):
-        if node is NULL:
-            return
-        printReverse(node.next)
-        print node.data
-    ```
-
-- **Explanation**:
-  - The function first **recursively travels to the end** of the list.
-  - During the **return phase** of the recursion, it **prints each node’s data**, effectively printing in reverse order.
-  - This approach requires **O(n)** time and **O(n)** space due to the call stack, but it is efficient and elegant for this task.
-  - Most importantly, this solution **does not alter the original list**, fulfilling the requirement of non-destructive reverse display.
-
----
-
-### **Conclusion**:  
-Mr. Tamim demonstrated a deep understanding of linked list operations:
-- He applied **pointer logic** carefully to solve the deletion problem without using any extra memory.
-- He respected the **constraints of singly linked lists** by choosing recursion to reverse display, ensuring both correctness and adherence to data structure principles.
-
-His solution was accurate, efficient, and reflected strong conceptual clarity in data structure manipulation.
-
---- 
-
-Let me know if you'd like this formatted into a printable report or PDF!
+## **উপসংহার**
+এই কাস্টম প্যাকেজগুলো **Stellarisys** টুলের জন্য অপরিহার্য ডেটা স্ট্রাকচার প্রদান করে, যা এলার্টগুলো কার্যকরভাবে পরিচালনা করতে, সংযোগগুলো ট্র্যাক করতে এবং ইউনিক IP ঠিকানাগুলো সংরক্ষণ করতে সক্ষম। এই প্যাকেজগুলো বুঝতে পারলে আপনি টুলটি কিভাবে লগ ডেটা প্রক্রিয়া করে এবং সম্ভাব্য নিরাপত্তা হুমকি সনাক্ত করে তা grasp করতে পারবেন। যদি আপনার কোনো নির্দিষ্ট প্রশ্ন থাকে বা কোনো অংশ সম্পর্কে আরও ব্যাখ্যা প্রয়োজন হয়, তাহলে নির্দ্বিধায় জিজ্ঞাসা করুন!
