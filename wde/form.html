@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Full Registration Form</title>
+</head>
+<body>
+    <h1>HTML Full Form Example</h1>
+
+    <form>
+        <fieldset style="border: 2px solid black; padding: 15px;">
+            <legend><b>Registration Form</b></legend>
+
+            <!-- User Personal Info -->
+            <fieldset style="margin-bottom: 20px;">
+                <legend>User Personal Information</legend>
+
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname"><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+
+                <label for="confirm_password">Confirm Password:</label><br>
+                <input type="password" id="confirm_password" name="confirm_password"><br><br>
+
+                <label>Gender:</label><br>
+                <input type="radio" name="gender" id="male" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="others" value="Others">
+                <label for="others">Others</label><br><br>
+
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob"><br><br>
+
+                <label for="address">Address:</label><br>
+                <textarea id="address" name="address" rows="4" cols="30"></textarea><br><br>
+            </fieldset>
+
+            <!-- Other Details -->
+            <fieldset style="margin-bottom: 20px;">
+                <legend>Other Information</legend>
+
+                <label for="event-type">Event Type:</label><br>
+                <select id="event-type" name="event-type">
+                    <option value="">--Select Event--</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="corporate">Corporate</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+
+                <label for="interests">Choose Interests:</label><br>
+                <input type="checkbox" id="coding" name="interests" value="Coding">
+                <label for="coding">Coding</label>
+                <input type="checkbox" id="design" name="interests" value="Design">
+                <label for="design">Design</label>
+                <input type="checkbox" id="music" name="interests" value="Music">
+               <label for="music">Music</label><br><br>
+
+                <label for="upload">Upload Profile Picture:</label><br>
+                <input type="file" id="upload" name="upload"><br><br>
+
+                <label for="rating">How do you rate our form? (1 to 10):</label><br>
+                <input type="range" id="rating" name="rating" min="1" max="10"><br><br>
+
+                <label for="color">Pick Your Favorite Color:</label><br>
+                <input type="color" id="color" name="color"><br><br>
+
+                <label for="website">Your Website:</label><br>
+                <input type="url" id="website" name="website"><br><br>
+            </fieldset>
+
+            <!-- Feedback -->
+            <fieldset>
+                <legend>Comments & Feedback</legend>
+                <label for="comment">Write your feedback:</label><br>
+                <textarea id="comment" name="comment" rows="5" cols="40" placeholder="Write here..."></textarea><br><br>
+            </fieldset>
+
+            <!-- Terms & Submit -->
+            <br>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">✅ I agree to the <a href="#">terms and conditions</a></label><br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+
+        </fieldset>
+    </form>
+</body>
+</html>

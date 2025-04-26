@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Color Blocks with Text</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #fff;
+      gap: 30px;
+      font-family: Arial, sans-serif;
+    }
+
+    .block {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .blue {
+      background-color: #003CFF;
+      border-radius: 30px;
+    }
+
+    .yellow {
+      background-color: #FFCC00;
+      color: black; /* Better contrast on yellow */
+      border-radius: 80px 80px 30px 30px;
+    }
+
+    .purple {
+      background-color: #3A374E;
+      border-radius: 100px 100px 0 60px;
+
+    }
+
+    .red {
+      background-color: #F05667;
+      border-radius: 30px 130px;
+    }
+  </style>
+</head>
+<body>
+  <div class="block blue">Blue Box</div>
+  <div class="block yellow">Yellow Box</div>
+  <div class="block purple">Purple Box</div>
+  <div class="block red">Red Box</div>
+</body>
+</html>
