@@ -166,6 +166,9 @@ Where:
 | Many features with risk of overfitting | Ridge/Lasso Regression | Regularization to prevent overfitting |
 | Binary classification problem | Logistic Regression | Predicting probabilities for a binary outcome |
 
+
+### OOP pdf
+https://github.com/CVUT-FS-12110/Object-Oriented-Programming/blob/master/resources/lectures/P01-intro.pdf
 ---
 
 
