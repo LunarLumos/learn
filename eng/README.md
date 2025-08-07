@@ -1,80 +1,125 @@
-Here’s a **detailed but easy-to-follow storyline script** with clear transitions and memory cues. I’ll mark **practice tips** in brackets:
 
 ---
 
-### **1. Introduction (15 seconds)**
-*[Show Title Slide]*  
-"Hello! Today I’ll tell you the incredible true story of *The Pursuit of Happyness*.  
-*(Funny part:)* My teammates Aadil and Aifee couldn’t come today… because they’ve achieved *spiritual enlightenment*! (Point upward) But don’t worry—their PowerPoint skills are still helping me!"  
+## 🎤 **Human-Friendly Presentation Script – 7 Slides**
 
-*[PRACTICE TIP: Pause after the joke. Smile!]*
+**Topic: Completing the Accounting Cycle**
+**Presenter: Aadil**
 
 ---
 
-### **2. Chris’s Early Struggle (30 seconds)**
-*[Show Chris selling scanners]*  
-"Chris Gardner was a poor salesman in 1981. His job? Selling expensive medical scanners *(mimic holding a scanner)*. But here’s the problem:  
-- Almost no hospitals wanted to buy them.  
-- His wife Linda *(point to her picture)* grew angry—they couldn’t pay rent!  
-- One day… she left him and their 5-year-old son, Christopher."  
+### **Slide 1: Completing the Accounting Cycle**
 
-*[PRACTICE TIP: Use fingers to count problems: 1-scanners, 2-wife, 3-money.]*
+*A comprehensive guide to mastering financial reporting*
+**Name: Aadil**
 
----
-
-### **3. Rock Bottom (30 seconds)**  
-*[Show homeless shelter photo]*  
-"Things got worse:  
-- Chris invested ALL his money in scanners… but went bankrupt.  
-- They got EVICTED *(clap hands once for dramatic effect)*.  
-- For months, they slept in homeless shelters, subway bathrooms *(hold nose briefly)*, and even under his office desk!"  
-
-*[PRACTICE TIP: Imagine the smells/sounds—it’ll help remember details.]*
+> Hey everyone! I’m **Aadil**, and today I’m going to walk you through something really important in accounting — it’s called the **accounting cycle**.
+>
+> Now I know accounting might sound a bit dry at first, but once you understand the cycle — like how all the pieces fit together — it actually starts to make a lot of sense.
+>
+> We’ll go step by step, and by the end, I promise it won’t feel as complicated as it sounds.
 
 ---
 
-### **4. The Internship (20 seconds)**  
-*[Show internship slide]*  
-"But Chris got one chance: an unpaid internship at a stockbroker firm.  
-- He worked all day *without pay*.  
-- At night, he studied books by flashlight *(mimic holding a book)*.  
-- He hid their homelessness—even washing shirts in sink bathrooms!"  
+### **Slide 2: Learning Objectives**
 
-*[PRACTICE TIP: Make a "studying" gesture to trigger your memory.]*
+**01 – Worksheet Preparation**
+**02 – Closing Entries & Trial Balance**
+**03 – Accounting Cycle & Corrections**
 
----
-
-### **5. The Breakthrough (20 seconds)**  
-*[Show final scene]*  
-"After 6 months of suffering:  
-- Chris WON the internship competition! *(Raise fists slightly)*  
-- Got a real job with salary.  
-- First thing he did? Ran to hug his son *(hug yourself briefly)*—they finally had a home!"  
-
-*[PRACTICE TIP: Say "6 months" loudly—it’s a key number.]*
+> So, here’s what we’re going to cover:
+>
+> First, I’ll show you how we use a **worksheet** to get all our numbers organized.
+> Then, we’ll look at how to **close the books** at the end of an accounting period.
+> And finally, I’ll explain how to **fix any errors** and what we mean by **reversing entries**.
+>
+> Don’t worry if you’re new to this — we’ll take it one step at a time.
 
 ---
 
-### **6. Lessons (15 seconds)**  
-*[Show lessons slide]*  
-"This story teaches us:  
-1. Never quit—even when life is unfair.  
-2. Love is stronger than money.  
-3. Happiness comes from *fighting* for it!"  
+### **Slide 3: Worksheet Preparation**
 
-*[PRACTICE TIP: Point to each lesson on the slide as you say it.]*
+**Steps in Preparing a Worksheet**
+**Financial Statements from a Worksheet**
+**Adjusting Entries from a Worksheet**
 
----
-
-### **7. Closing (10 seconds)**  
-*[Show "Thank You"]*  
-"So remember: Bad times don’t last forever. And my teammates? *(Look around playfully)* Still enjoying their cosmic vacation! Thank you!"  
-
-*[PRACTICE TIP: End with a big smile and slight bow.]*
+> Think of a **worksheet** like a big cheat sheet that helps us get ready before we prepare official reports.
+>
+> First, we list out all the balances from the trial balance.
+> Then, we make **adjusting entries** — like fixing any missing expenses or revenues.
+>
+> Once that’s done, we can actually use the worksheet to pull out the numbers we need to create our **income statement** and **balance sheet**.
+>
+> It’s super helpful because it shows us everything in one place — kind of like a rough draft before submitting the final copy.
 
 ---
 
-### **Storyline Cheat Sheet:**  
-**1. Poor salesman → 2. Scanners fail → 3. Wife leaves → 4. Homeless (bathrooms!) → 5. Unpaid internship → 6. Wins job → 7. Happy ending**  
+### **Slide 4: Closing Entries & Post-Closing Trial Balance**
 
-Practice by **telling it to a mirror 3 times**—you’ll nail it! 😊
+**Preparing Closing Entries**
+**Posting Closing Entries**
+**Post-Closing Trial Balance**
+
+> At the end of the accounting period, we need to **close** all our temporary accounts — like revenues, expenses, and drawings.
+>
+> Why? Because we’re starting fresh in the next period. We don’t want last month’s income or expenses to roll over.
+>
+> After closing, we post everything to the ledger, then prepare a **post-closing trial balance** to make sure everything still balances.
+>
+> This step helps keep things clean and accurate going forward.
+
+---
+
+### **Slide 5: The Accounting Cycle & Correcting Entries**
+
+**Summary of the Accounting Cycle**
+**Correcting Entries**
+**Reversing Entries**
+
+> So, here’s a quick recap of the **accounting cycle**:
+> We start with transactions, record them, post them, adjust them, create financial statements, then close everything at the end.
+>
+> But hey — we’re human. Mistakes happen.
+> That’s why we have **correcting entries** — to fix errors if we mess something up.
+>
+> And sometimes, we use **reversing entries** at the beginning of a new period to make future entries easier.
+> Not always required, but they make life simpler.
+
+---
+
+### **Slide 6: Classified Balance Sheet Sections**
+
+**Assets – Current, Long-Term, PPE, Intangible**
+**Liabilities – Current & Long-Term**
+**Owner’s Equity**
+
+> The **balance sheet** is like a financial snapshot. It tells us what the business owns and owes.
+>
+> * **Assets** are the good stuff — cash, buildings, equipment, etc.
+> * **Liabilities** are what the business owes — like loans or bills.
+> * And **Owner’s Equity** is what’s left for the owner after paying off debts.
+>
+> When we **classify** these into sections like current vs. long-term, it gives a clearer picture of the business’s financial health.
+
+---
+
+### **Slide 7: Key Takeaways**
+
+**1. Master the Worksheet**
+**2. Understand Closing Procedures**
+**3. Navigate the Accounting Cycle**
+**4. Classify with Confidence**
+
+> Alright, let’s wrap it up:
+>
+> * The **worksheet** helps you organize and double-check everything.
+> * **Closing entries** help you start fresh every period.
+> * The full **accounting cycle** connects every step, from the first entry to the final report.
+> * And knowing how to **classify** things properly on the balance sheet makes reports way easier to understand.
+>
+> That’s it from me — thanks so much for listening!
+> If you’ve got any questions, I’m happy to answer them now.
+
+---
+
+Would you like this version formatted into a **PowerPoint with notes**, or maybe as a **printable handout** to practice from?
