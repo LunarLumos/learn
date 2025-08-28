@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+    <style>
+        body { font-family: Arial; max-width: 400px; margin: 20px auto; }
+        h1 { text-align: center; }
+        ul { padding: 0; }
+        li { padding: 8px; margin: 5px 0; background: #f0f0f0; }
+        a { color: red; float: right; }
+        form { margin-top: 20px; }
+        input { padding: 8px; width: 70%; }
+        button { padding: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Products</h1>
+    
+    <ul>
+        {% for p in products %}
+        <li>{{ p[1] }} <a href="/remove/{{ p[0] }}">X</a></li>
+        {% endfor %}
+    </ul>
+
+    <form method="POST" action="/add">
+        <input type="text" name="name" placeholder="New product" required>
+        <button>Add</button>
+    </form>
+</body>
+</html>
